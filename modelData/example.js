@@ -11,12 +11,12 @@
 var cs142models;
 
 if (cs142models === undefined) {
-   cs142models = {};
+  cs142models = {};
 }
 
-cs142models.exampleModel = function() {
-   return {
-      name: 'Unknown Name'
-   };
+cs142models.exampleModel = function () {
+  return {
+    name: 'Batnaidan',
+    motto: 'Just Do It',
+  };
 };
-

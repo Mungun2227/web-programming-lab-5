@@ -9,13 +9,31 @@ import './States.css';
 class States extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      states: window.cs142models.statesModel(),
+      inputValue: '',
+    }
     console.log('window.cs142models.statesModel()', window.cs142models.statesModel());
   }
-
+  handleChange(event) {
+    console.log(event.target.value);
+    this.setState({ inputValue: event.target.value });
+  }
   render() {
     return (
-      <div>
-        Replace this with the code for CS142 Project #4, Problem #2
+      <div className="container">
+        <input type="text" value={this.state.inputValue} onChange={this.handleChange.bind(this)}></input>
+        {this.state.inputValue ? (
+          this.state.states.map((el, index) => {
+            if(el.toLowerCase().includes(this.state.inputValue.toLowerCase())) {
+              return <div key={index}>{el}</div>
+            }
+          })
+         ) : (
+          this.state.states.map((el, index) => (
+            <div key={index}>{el}</div>
+          ))
+        )}
       </div>
     );
   }

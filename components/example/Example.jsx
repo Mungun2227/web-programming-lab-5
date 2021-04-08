@@ -23,6 +23,7 @@ class Example extends React.Component {
     // We read the example model data into the state variable 'name'
     this.state = {
       name: window.cs142models.exampleModel().name,
+      motto: window.cs142models.exampleModel().motto,
       counter: 0,
       inputValue: '',
       buttonWasClicked: '',
@@ -66,6 +67,7 @@ class Example extends React.Component {
 
   // Method called when the input box is typed into.
   handleChange(event) {
+    console.log(event.target.value);
     this.setState({ inputValue: event.target.value });
   }
 
@@ -103,7 +105,11 @@ class Example extends React.Component {
         <h1>CS142 Project#4 React.js Example</h1>
 
         <div className="motto-update">
-          {/* Your problem #1 motto displaying and updating widget goes here */}
+          <pre>
+            <code className="language-markup">
+              {this.state.name} - {this.state.motto}
+            </code>
+          </pre>
         </div>
 
         <p>
@@ -163,9 +169,7 @@ class Example extends React.Component {
         </p>
         <pre className="cs142-example-code">
           <code className="language-jsx">
-            {
-`<p>My name is "{this.state.name}".</p>`
-            }
+            <p>My name is &ldquo;{this.state.name}&rdquo;.</p>
           </code>
         </pre>
         <p>
