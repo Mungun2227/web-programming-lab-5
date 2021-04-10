@@ -4,3 +4,34 @@ CSS for the CS142 project #4 Problem #2 states component
 Since CSS uses a global name space for classes we should use names starting with
 cs142-states- here.
 */
+body {
+  margin: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.state-container {
+  flex-direction: column;
+  width: 15vw;
+  margin: 0;
+  height: 45vh;
+  margin-top: 1rem;
+  overflow: scroll;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+  width: 15vw;
+  position: relative;
+  bottom: -11px;
+  color: black;
+  display: inline-block;
+  padding: 0.4rem 0.1rem;
+  font-size: 1rem;
+  border-bottom: 4px solid #383838;
+  outline: 0;
+}

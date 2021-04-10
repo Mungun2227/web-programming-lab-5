@@ -6,6 +6,9 @@ React application and the component in the class name.  The hope is any other st
 you use won't conflict with these names.
 */
 
+body {
+  margin: 0;
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 .motto-update {
   font-family: 'Roboto', sans-serif;
