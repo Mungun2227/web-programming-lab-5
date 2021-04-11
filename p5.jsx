@@ -4,7 +4,7 @@ import './p4.css';
 import States from './components/states/States';
 import Example from './components/example/Example';
 
-class ProblemFour extends React.Component {
+class ProblemFive extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -34,4 +34,4 @@ class ProblemFour extends React.Component {
         )
     }
 }
-ReactDOM.render(<ProblemFour />, document.getElementById('reactapp'));
+ReactDOM.render(<ProblemFive />, document.getElementById('reactapp'));

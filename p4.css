@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.button-container {
+  background-color: #20232a;
+  text-align: center;
+}
+.button-container button {
+  cursor: pointer;
+  margin: 1rem;
+  padding: 0.7rem 1rem;
+  background-color: #61dafb;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  transition-duration: 200ms;
+  border-radius: 5px;
+}
+.button-container button:hover {
+  background-color: #fff;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
