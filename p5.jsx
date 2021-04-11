@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './p4.css';
 import States from './components/states/States';
 import Example from './components/example/Example';
+import { Route, Link, HashRouter } from 'react-router-dom';
 
 class ProblemFive extends React.Component {
     constructor(props) {
@@ -18,19 +19,20 @@ class ProblemFive extends React.Component {
     }
     render () {
         return (
-            <div>
-                {this.state.didClick ? <div>
+            <HashRouter>
+                <div>
                     <div className="button-container">
-                        <button onClick={this.handleClick}>Switch to States</button>
+                        <Link to="/states">
+                            <button onClick={this.handleClick}>Go to States</button>
+                        </Link>
+                        <Link to="example">
+                            <button onClick={this.handleClick}>Go to Example</button>
+                        </Link>
                     </div>
-                    <Example />
-                </div> : <div>
-                    <div className="button-container">
-                        <button onClick={this.handleClick}>Switch to Example</button>
-                    </div>
-                    <States />
-                </div>}
-            </div>
+                    <Route path="/states" component={States}/>
+                    <Route path="/example" component={Example}/>
+                </div>
+            </HashRouter>
         )
     }
 }
